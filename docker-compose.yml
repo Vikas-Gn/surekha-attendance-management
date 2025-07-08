@@ -5,7 +5,7 @@ services:
     container_name: Employee-Attendance
     build: ./Employee-Attendance
     ports:
-      - "8041:80"
+      - "8602:80"
     depends_on:
       - backend
 
@@ -13,7 +13,7 @@ services:
     container_name: HR-Attendance
     build: ./HR-Attendance
     ports:
-      - "8042:80"
+      - "8603:80"
     depends_on:
       - backend
 
@@ -21,7 +21,7 @@ services:
     container_name: Backend
     build: ./Backend
     ports:
-      - "3037:3037"
+      - "3601:3601"
     environment:
       - DB_HOST=postgres
       - DB_USER=postgres
@@ -35,7 +35,7 @@ services:
     container_name: postgres
     image: postgres:13
     ports:
-      - "5006:5432"
+      - "5601:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin123
